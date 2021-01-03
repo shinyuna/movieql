@@ -2,9 +2,9 @@ import { getMovieList, getMovie, getSuggestionList } from "./db"
 
 const resolvers = {
   Query: {
-    getMovieList: (_, { limit, rating }) => getMovieList(limit, rating),
-    getMovie: (_, { id }) => getMovie(id),
-    getSuggestionList: (_, { id }) => getSuggestionList(id),
+    movies: (_, { limit, rating }) => getMovieList(limit, rating),
+    movie: (_, { id }) => getMovie(id),
+    suggestions: (_, { id }) => getSuggestionList(id),
   },
   // Mutation: {
   //   addMovie: (_, { title, score }) => addMovie(title, score),

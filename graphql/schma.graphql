@@ -9,9 +9,9 @@ type Movie {
 }
 
 type Query {
-  getMovieList(limit: Int, rating: Float): [Movie]!
-  getMovie(id: Int!): Movie!
-  getSuggestionList(id: Int!): [Movie]!
+  movies(limit: Int, rating: Float): [Movie]!
+  movie(id: Int!): Movie!
+  suggestions(id: Int!): [Movie]!
 }
 
 # type Mutation {
